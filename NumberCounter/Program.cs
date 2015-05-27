@@ -31,10 +31,6 @@ namespace NumberCounter
                     DeclareCorrectCells();
                     break;
                 }
-                else
-                {
-                    DeclareRemainingCells();
-                }
             } while (true);
 
             Console.ReadLine();
@@ -153,6 +149,12 @@ namespace NumberCounter
             do
             {
                 string entry = Console.ReadLine();
+
+                if (entry == "?")
+                {
+                    DeclareRemainingCells();
+                    continue;
+                }
 
                 int value = 0;
 
